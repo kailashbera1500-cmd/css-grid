@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .main_box{
+      background-color: black;
+      width: 748px;
+      height: 748px;
+      display: grid;
+      grid-template-rows:414px 130px 155px 22px ;
+      grid-template-columns: 320px 198px 153px 50px;
+      gap: 9px;
+
+    }
+    .red{
+      background-color: red;
+
+    }
+    .white{
+      background-color: #f0f1ec;
+    }
+    #first{
+      grid-column: span 3;
+    }
+    #second{
+      grid-row: span 2;
+    }
+    #third{
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    #fourth{
+      grid-column: 1;
+    }
+    #fifth{
+      grid-column: 4;
+      grid-row: 3/-1;
+    }
+    .yellow{
+      background-color:#f9d01e;
+      grid-column-start: 2;
+      grid-column-end:3 ;
+    }
+    .black{
+      background-color: #232629;
+      grid-column: 3/4;
+    }
+    .blue{
+      background-color: #004592;
+      border-bottom: 10px solid black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <div class="main_box">
+    <div class="red"></div>
+    <div class="white" id="first"></div>
+    <div class="white" id="second"></div>
+    <div class="white" id="third"></div>
+    <div class="blue"></div>    
+    <div class="white" id="fourth"></div>
+
+    <div class="yellow"></div>
+    <div class="black"></div>
+
+    <div class="white" id="fifth"></div>
+
+   </div>
+</body>
+
+</html>
